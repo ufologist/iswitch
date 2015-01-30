@@ -1,5 +1,7 @@
-/* 参考: [招商银行 手机银行网页版](https://mobile.cmbchina.com/MobileHtml/Login/LoginA.aspx) */
-/* 参考: [Switchery - iOS 7 style switches for your checkboxes](http://abpetkov.github.io/switchery/) */
+/**
+ * 参考: [招商银行 手机银行网页版](https://mobile.cmbchina.com/MobileHtml/Login/LoginA.aspx)
+ *       [Switchery - iOS 7 style switches for your checkboxes](http://abpetkov.github.io/switchery/)
+ */
 /* switch 滑动区域 */
 .iswitch {
     -webkit-appearance: none;
@@ -8,21 +10,26 @@
     height: 32px;
     padding: 0;
     margin: 0;
-    border: solid 1px #e6e6e6;
+    border: 1px solid #e6e6e6;
     background-color: #fff;
     border-radius: 20px;
     vertical-align: top;
     /* 阴影区域逐渐缩小的动画 */
-    box-shadow: inset 0 0 0 0 #fff;
+    box-shadow: inset 0 0 0 0 #e6e6e6;
     -webkit-transition: box-shadow .325s;
     cursor: pointer;
+    box-sizing: border-box;
 }
 /* switch 滑动区域的背景动画 */
 .iswitch:checked {
     border: none;
     /* 阴影区域逐渐扩大的动画 */
-    box-shadow: inset 0 0 0 17px #1F6FA4;
+    box-shadow: inset 0 0 0 17px #64BD63;
     /* -webkit-transition: none; */ /* ios7 check状态时没有动画 */
+}
+.iswitch:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
 }
 /* 去掉focus时的边框 */
 .iswitch:focus {
@@ -32,8 +39,6 @@
 .iswitch::after {
     content: "";
     position: absolute;
-    top: 1px;
-    left: 1px;
     height: 30px;
     width: 30px;
     background-color: #fff;
@@ -41,24 +46,26 @@
     border-radius: 50%;
     -webkit-transition: -webkit-transform .1s ease-in-out;
     transition: -webkit-transform .1s ease-in-out;
-    -webkit-animation-name: iswitch-thumb-off;
+    -webkit-animation-name: iswitchThumbOff;
     -webkit-animation-duration: .45s;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-fill-mode: forwards;
 }
 .iswitch:checked::after {
-    -webkit-transform: translate3d(20px,0,0);
+    top: 1px;
+    -webkit-transform: translate3d(21px,0,0);
     -webkit-transition-duration: .2s;
     /* 宽度拉伸动画, 营造速度感, 可以去掉直接做translate动画 */
-    -webkit-animation-name: iswitch-thumb-on;
+    /* XXX 目前动画不知因何原因没有产生效果 */
+    -webkit-animation-name: iswitchThumbOn;
 }
-@-webkit-keyframes iswitch-thumb-on {
+@-webkit-keyframes iswitchThumbOn {
     0% { width: 30px; }
     1% { width: 40px; }
     50% { width: 30px; }
     100% { width: 30px; }
 }
-@-webkit-keyframes iswitch-thumb-off {
+@-webkit-keyframes iswitchThumbOff {
     0% { width: 30px; }
     5% { width: 45px; }
     50% { width: 30px; }
