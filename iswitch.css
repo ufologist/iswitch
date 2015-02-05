@@ -5,6 +5,8 @@
 /* switch 滑动区域 */
 .iswitch {
     -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     position: relative;
     width: 52px;
     height: 32px;
@@ -17,6 +19,8 @@
     /* 阴影区域逐渐缩小的动画 */
     box-shadow: inset 0 0 0 0 #e6e6e6;
     -webkit-transition: box-shadow .325s;
+       -moz-transition: box-shadow .325s;
+            transition: box-shadow .325s;
     cursor: pointer;
     box-sizing: border-box;
 }
@@ -45,19 +49,25 @@
     box-shadow: 0 3px 4px rgba(0,0,0,0.25); /* 0 0 2px rgba(0,0,0,.5); */
     border-radius: 50%;
     -webkit-transition: -webkit-transform .1s ease-in-out;
-    transition: -webkit-transform .1s ease-in-out;
-    -webkit-animation-name: iswitchThumbOff;
-    -webkit-animation-duration: .45s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-fill-mode: forwards;
+       -moz-transition:    -moz-transform .1s ease-in-out;;
+            transition:         transform .1s ease-in-out;
+    -webkit-animation: iswitchThumbOff .45s ease-in-out forwards;
+       -moz-animation: iswitchThumbOff .45s ease-in-out forwards;
+            animation: iswitchThumbOff .45s ease-in-out forwards;
 }
 .iswitch:checked::after {
     top: 1px;
     -webkit-transform: translate3d(21px,0,0);
+       -moz-transform: translate3d(21px,0,0);
+            transform: translate3d(21px,0,0);
     -webkit-transition-duration: .2s;
+       -moz-transition-duration: .2s;
+            transition-duration: .2s;
     /* 宽度拉伸动画, 营造速度感, 可以去掉直接做translate动画 */
     /* 目前动画有兼容性问题(在chrome 40.0.2214.93上测试有效果), 在一些浏览器上面没有效果, 猜测是伪元素作怪吧 */
     -webkit-animation-name: iswitchThumbOn;
+       -moz-animation-name: iswitchThumbOn;
+            animation-name: iswitchThumbOn;
 }
 @-webkit-keyframes iswitchThumbOn {
     0% { width: 30px; }
@@ -65,7 +75,31 @@
     50% { width: 30px; }
     100% { width: 30px; }
 }
+@-moz-keyframes iswitchThumbOn {
+    0% { width: 30px; }
+    1% { width: 40px; }
+    50% { width: 30px; }
+    100% { width: 30px; }
+}
+@keyframes iswitchThumbOn {
+    0% { width: 30px; }
+    1% { width: 40px; }
+    50% { width: 30px; }
+    100% { width: 30px; }
+}
 @-webkit-keyframes iswitchThumbOff {
+    0% { width: 30px; }
+    5% { width: 45px; }
+    50% { width: 30px; }
+    100% { width: 30px; }
+}
+@-moz-keyframes iswitchThumbOff {
+    0% { width: 30px; }
+    5% { width: 45px; }
+    50% { width: 30px; }
+    100% { width: 30px; }
+}
+@keyframes iswitchThumbOff {
     0% { width: 30px; }
     5% { width: 45px; }
     50% { width: 30px; }
