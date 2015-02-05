@@ -24,6 +24,8 @@
             transition: box-shadow .325s;
     cursor: pointer;
     box-sizing: border-box;
+    /* 去除触发点击时, 响应区域的背景色 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 /* switch 滑动区域的背景动画 */
 .iswitch:checked {
