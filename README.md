@@ -30,10 +30,12 @@ PC端(通过[Browserling](https://browserling.com)测试)
 
 
 PS: 貌似W3C标准(CSS2.1)说input不应该支持after伪元素, 也就是说其他浏览器支持其实是不标准的!?
+
 [Can I use the :after pseudo-element on an input field?](http://stackoverflow.com/questions/2587669/can-i-use-the-after-pseudo-element-on-an-input-field)
 
 
 The :after and :before may or may not work on e.g. input elements. This depends on the browser, and it is a gray area in the CSS 2.1 spec (and not clarified in CSS3 Selectors spec).
+
 [CSS :after input placeholder not working in mozilla](http://stackoverflow.com/questions/12834939/css-after-input-placeholder-not-working-in-mozilla)
 
 ## 参考
