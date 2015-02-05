@@ -17,7 +17,7 @@
     border: 1px solid #e6e6e6;
     background-color: #fff;
     border-radius: 20px;
-    vertical-align: top;
+    vertical-align: middle;
     /* 阴影区域逐渐缩小的动画 */
     box-shadow: inset 0 0 0 0 #e6e6e6;
     -webkit-transition: box-shadow .325s;
