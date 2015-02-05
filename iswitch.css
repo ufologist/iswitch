@@ -1,11 +1,13 @@
 /**
- * 参考: [招商银行 手机银行网页版](https://mobile.cmbchina.com/MobileHtml/Login/LoginA.aspx)
- *       [Switchery - iOS 7 style switches for your checkboxes](http://abpetkov.github.io/switchery/)
+ * iSwitch
+ * TODO: 这里添加一句话的说明文字
+ * 
+ * @version 1.0.0 2015-02-05
+ * @author Sun https://github.com/ufologist/iswitch
  */
 /* switch 滑动区域 */
 .iswitch {
     -webkit-appearance: none;
-       -moz-appearance: none;
             appearance: none;
     position: relative;
     width: 52px;
@@ -19,7 +21,6 @@
     /* 阴影区域逐渐缩小的动画 */
     box-shadow: inset 0 0 0 0 #e6e6e6;
     -webkit-transition: box-shadow .325s;
-       -moz-transition: box-shadow .325s;
             transition: box-shadow .325s;
     cursor: pointer;
     box-sizing: border-box;
@@ -49,33 +50,22 @@
     box-shadow: 0 3px 4px rgba(0,0,0,0.25); /* 0 0 2px rgba(0,0,0,.5); */
     border-radius: 50%;
     -webkit-transition: -webkit-transform .1s ease-in-out;
-       -moz-transition:    -moz-transform .1s ease-in-out;;
             transition:         transform .1s ease-in-out;
     -webkit-animation: iswitchThumbOff .45s ease-in-out forwards;
-       -moz-animation: iswitchThumbOff .45s ease-in-out forwards;
             animation: iswitchThumbOff .45s ease-in-out forwards;
 }
 .iswitch:checked::after {
     top: 1px;
     -webkit-transform: translate3d(21px,0,0);
-       -moz-transform: translate3d(21px,0,0);
             transform: translate3d(21px,0,0);
     -webkit-transition-duration: .2s;
-       -moz-transition-duration: .2s;
             transition-duration: .2s;
     /* 宽度拉伸动画, 营造速度感, 可以去掉直接做translate动画 */
-    /* 目前动画有兼容性问题(在chrome 40.0.2214.93上测试有效果), 在一些浏览器上面没有效果, 猜测是伪元素作怪吧 */
+    /* 目前动画有兼容性问题(在chrome 40.0.2214.93上测试有效果), 在一些浏览器上面没有效果, 应该是伪元素作怪 */
     -webkit-animation-name: iswitchThumbOn;
-       -moz-animation-name: iswitchThumbOn;
             animation-name: iswitchThumbOn;
 }
 @-webkit-keyframes iswitchThumbOn {
-    0% { width: 30px; }
-    1% { width: 40px; }
-    50% { width: 30px; }
-    100% { width: 30px; }
-}
-@-moz-keyframes iswitchThumbOn {
     0% { width: 30px; }
     1% { width: 40px; }
     50% { width: 30px; }
@@ -88,12 +78,6 @@
     100% { width: 30px; }
 }
 @-webkit-keyframes iswitchThumbOff {
-    0% { width: 30px; }
-    5% { width: 45px; }
-    50% { width: 30px; }
-    100% { width: 30px; }
-}
-@-moz-keyframes iswitchThumbOff {
     0% { width: 30px; }
     5% { width: 45px; }
     50% { width: 30px; }
