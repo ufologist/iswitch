@@ -4,14 +4,17 @@ Turn your default HTML checkbox inputs into iOS 7 style switches by only one CSS
 
 ## 使用方法
 1. 将iswitch.css添加到页面
+    
     ```html
     <link rel="stylesheet" href="dist/iswitch.min.css">
     ```
 2. 给input checkbox添加iswitch的class
+    
     ```html
     <input type="checkbox" class="iswitch">
     ```
 3. 刷新页面, 闪亮登场
+    
     ![iSwitch preview status](http://ufologist.github.io/iswitch/images/iswitch-preview-status.png "iSwitch preview status")
 
 ## 优势
