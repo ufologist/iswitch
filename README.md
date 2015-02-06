@@ -1,10 +1,6 @@
 # iSwitch
 Turn your default HTML checkbox inputs into iOS 7 style switches by only one CSS class
-TODO 这里放个图片
-
-纯CSS实现的效果, 参考 https://github.com/abpetkov/switchery 来完善文档
-
-Switchery is a simple component that helps you turn your default HTML checkbox inputs into beautiful iOS 7 style switches in just few simple steps. You can easily customize switches, so that they match your design perfectly.
+![iSwitch preview](http://ufologist.github.io/iswitch/images/iswitch.gif "iSwitch preview")
 
 ## 使用方法
 1. 将iswitch.css添加到页面
