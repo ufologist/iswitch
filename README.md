@@ -1,4 +1,4 @@
-# iSwitch v1.0.0 2015-02-05
+# iSwitch v1.0.0 2015-02-05 [![Build Status](https://travis-ci.org/ufologist/iswitch.svg?branch=master)](https://travis-ci.org/ufologist/iswitch)
 Turn your default HTML checkbox inputs into iOS 7 style switches by only one CSS class
 ![iSwitch preview](http://ufologist.github.io/iswitch/images/iswitch.gif "iSwitch preview")
 
@@ -9,7 +9,7 @@ Turn your default HTML checkbox inputs into iOS 7 style switches by only one CSS
 4. 结构简单, 代码清晰, 可随意定制出适合自己的样式
 
 ## 使用方法
-1. 将iswitch.css添加到页面
+1. 将[iswitch.css](https://github.com/ufologist/iswitch/raw/master/dist/iswitch.min.css)添加到页面
     
     ```html
     <link rel="stylesheet" href="dist/iswitch.min.css">
