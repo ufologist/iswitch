@@ -1,0 +1,94 @@
+/*!
+ * iSwitch
+ * Turn your default HTML checkbox inputs into iOS 7 style switches by only one CSS class
+ * 
+ * @version 1.0.0 2015-02-06
+ * @author Sun https://github.com/ufologist/iswitch
+ * @license MIT
+ */
+/* switch 滑动区域 */
+.iswitch {
+    -webkit-appearance: none;
+            appearance: none;
+    position: relative;
+    width: 52px;
+    height: 32px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+    border-radius: 20px;
+    vertical-align: middle;
+    /* 阴影区域逐渐缩小的动画 */
+    box-shadow: inset 0 0 0 0 #e6e6e6;
+    -webkit-transition: box-shadow .325s;
+            transition: box-shadow .325s;
+    cursor: pointer;
+    box-sizing: border-box;
+    /* 去除触发点击时, 响应区域的背景色 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+/* switch 滑动区域的背景动画 */
+.iswitch:checked {
+    border: none;
+    /* 阴影区域逐渐扩大的动画 */
+    box-shadow: inset 0 0 0 17px #64BD63;
+    /* -webkit-transition: none; */ /* ios7 check状态时没有动画 */
+}
+.iswitch:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+/* 去掉focus时的边框 */
+.iswitch:focus {
+    outline: none;
+}
+/* switch 滑动区域上的thumb */
+.iswitch::after {
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    box-shadow: 0 3px 4px rgba(0,0,0,0.25); /* 0 0 2px rgba(0,0,0,.5); */
+    border-radius: 50%;
+    -webkit-transition: -webkit-transform .1s ease-in-out;
+            transition:         transform .1s ease-in-out;
+    -webkit-animation: iswitchThumbOff .45s ease-in-out forwards;
+            animation: iswitchThumbOff .45s ease-in-out forwards;
+}
+.iswitch:checked::after {
+    top: 1px;
+    -webkit-transform: translate3d(21px,0,0);
+            transform: translate3d(21px,0,0);
+    -webkit-transition-duration: .2s;
+            transition-duration: .2s;
+    /* 宽度拉伸动画, 营造速度感, 可以去掉直接做translate动画 */
+    /* 目前动画有兼容性问题(在chrome 40.0.2214.93上测试有效果), 在一些浏览器上面没有效果, 应该是伪元素作怪 */
+    -webkit-animation-name: iswitchThumbOn;
+            animation-name: iswitchThumbOn;
+}
+@-webkit-keyframes iswitchThumbOn {
+    0% { width: 30px; }
+    1% { width: 40px; }
+    50% { width: 30px; }
+    100% { width: 30px; }
+}
+@keyframes iswitchThumbOn {
+    0% { width: 30px; }
+    1% { width: 40px; }
+    50% { width: 30px; }
+    100% { width: 30px; }
+}
+@-webkit-keyframes iswitchThumbOff {
+    0% { width: 30px; }
+    5% { width: 45px; }
+    50% { width: 30px; }
+    100% { width: 30px; }
+}
+@keyframes iswitchThumbOff {
+    0% { width: 30px; }
+    5% { width: 45px; }
+    50% { width: 30px; }
+    100% { width: 30px; }
+}
