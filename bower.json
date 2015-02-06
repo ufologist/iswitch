@@ -1,0 +1,31 @@
+{
+    "name": "iSwitch",
+    "version": "1.0.0",
+    "main": [
+        "dist/iswitch.css",
+        "dist/iswitch.min.css"
+    ],
+    "description": "Turn your checkbox inputs into iOS 7 style switches by only one CSS class",
+    "authors": [
+        "Sun (https://github.com/ufologist)"
+    ],
+    "keywords": [
+        "css3",
+        "ios",
+        "switch",
+        "input",
+        "checkbox"
+    ],
+    "license": "MIT",
+    "homepage": "http://ufologist.github.io/iswitch",
+    "ignore": [
+        "build",
+        "components",
+        "node_modules",
+        "bower_components",
+        "component.json",
+        "Gruntfile.js",
+        ".*"
+    ],
+    "dependencies": {}
+}

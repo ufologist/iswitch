@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <title>iSwitch示例</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="iswitch.css">
+    <!-- <link rel="stylesheet" href="iswitch.css"> -->
+    <link rel="stylesheet" href="dist/iswitch.min.css">
     <style>
     /* 以下样式仅用于示例页面, 与集成iswitch无关 */
     .body-iswitch {
@@ -23,10 +24,20 @@
         padding-bottom: 15px;
         border-bottom: 1px solid #ddd;
         box-shadow: 0 1px 0 #fff;
-        color: #64BD63;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2.5em;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     }
     .header small {
-        color: #aaa;
+        display: block;
+        margin-bottom: 5px;
+        color: #f9f9f9;
+        font-size: 0.4em;
+    }
+    .desc {
+        font-weight: bold;
     }
     .list-iswitch-example {
         list-style: none;
@@ -52,7 +63,8 @@
 <body class="body-iswitch">
     <!-- demo实例转移到gh-pages去, 做一个demo用N多个iswitch组合成字母: iOS 7 -->
     <div class="container">
-        <h1 class="header">iSwitch示例 <small>v1.0.0 2015-02-05</small></h1>
+        <h1 class="header">iSwitch <small>A pretty pure CSS3 iOS 7 style checkbox</small><small>v1.0.0 2015-02-05</small></h1>
+        <p class="desc">iSwitch helps you turn your default HTML checkbox inputs into iOS 7 style switches by only one CSS class.</p>
         <ul class="list-iswitch-example">
             <li>
                 <label for="iswitchDefault">默认状态的iSwitch</label> <input id="iswitchDefault" type="checkbox" name="iswitch" class="iswitch"> <span>选中状态: </span><span class="iswitch-status"></span>
@@ -74,7 +86,7 @@
     <script>
         [].slice.apply(document.querySelectorAll('.iswitch')).forEach(function(el) {
             el.parentNode.querySelector('.iswitch-status').innerText = el.checked;
-            el.onclick = function() {
+            el.onchange = function() {
                 this.parentNode.querySelector('.iswitch-status').innerText = this.checked;
             };
         });

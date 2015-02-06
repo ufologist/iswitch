@@ -1,0 +1,29 @@
+{
+    "name": "iSwitch",
+    "description": "Turn your checkbox inputs into iOS 7 style switches by only one CSS class",
+    "version": "1.0.0",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ufologist/iswitch/iswitch.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ufologist/iswitch/issues"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "grunt": "~0.4.2",
+        "grunt-contrib-clean": "~0.5.0",
+        "grunt-contrib-copy": "~0.7.0",
+        "grunt-contrib-cssmin": "~0.10.0",
+        "grunt-sed": "~0.1.1",
+        "load-grunt-tasks": "~0.3.0",
+        "time-grunt": "~0.2.0"
+    },
+    "engines": {
+        "node": ">=0.8.0"
+    },
+    "scripts": {
+        "build": "npm install && grunt"
+    }
+}

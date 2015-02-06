@@ -1,15 +1,28 @@
 # iSwitch
-iOS 7 style switches for your checkboxes
+Turn your default HTML checkbox inputs into iOS 7 style switches by only one CSS class
 TODO 这里放个图片
-
 
 纯CSS实现的效果, 参考 https://github.com/abpetkov/switchery 来完善文档
 
+Switchery is a simple component that helps you turn your default HTML checkbox inputs into beautiful iOS 7 style switches in just few simple steps. You can easily customize switches, so that they match your design perfectly.
+
+## 使用方法
+1. 将iswitch.css添加到页面
+```html
+<link rel="stylesheet" href="dist/iswitch.min.css">
+```
+2. 给input checkbox添加iswitch的class
+```html
+<input type="checkbox" class="iswitch">
+```
+3. 刷新页面, 闪亮登场
+TODO: 图片
+
 ## 优势
-1. 纯CSS, 无任何依赖, 随意集成到项目中使用
-2. 非常小巧(仅2kb - 未压缩)
-3. 结构简单, 易于使用
-4. 代码清晰, 可随意定制出适合自己的样式
+1. 纯CSS3实现, 无任何依赖, 易于使用
+2. 事件和状态兼容原有的checkbox
+3. 非常小巧 2.52 kB → 1.61 kB → 662 B (gzip)
+4. 结构简单, 代码清晰, 可随意定制出适合自己的样式
 
 ## 支持的浏览器
 PC端(通过[Browserling](https://browserling.com)测试)
@@ -41,3 +54,8 @@ The :after and :before may or may not work on e.g. input elements. This depends 
 ## 参考
 * [招商银行 手机银行网页版](https://mobile.cmbchina.com/MobileHtml/Login/LoginA.aspx)
 * [Switchery](http://abpetkov.github.io/switchery/)
+
+## License
+The MIT License (MIT)
+
+Copyright (c) 2015 Sun

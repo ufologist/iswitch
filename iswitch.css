@@ -1,9 +1,10 @@
-/**
+/*!
  * iSwitch
- * TODO: 这里添加一句话的说明文字
+ * Turn your default HTML checkbox inputs into iOS 7 style switches by only one CSS class
  * 
- * @version 1.0.0 2015-02-05
+ * @version %VERSION% %DATE%
  * @author Sun https://github.com/ufologist/iswitch
+ * @license MIT
  */
 /* switch 滑动区域 */
 .iswitch {
