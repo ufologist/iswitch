@@ -1,6 +1,12 @@
-# iSwitch
+# iSwitch v1.0.0 2015-02-05
 Turn your default HTML checkbox inputs into iOS 7 style switches by only one CSS class
 ![iSwitch preview](http://ufologist.github.io/iswitch/images/iswitch.gif "iSwitch preview")
+
+## 优势
+1. 纯CSS3实现, 无任何依赖, 易于使用
+2. 事件和状态兼容原有的checkbox
+3. 非常小巧 2.52 kB → 1.61 kB → 662 B (gzip)
+4. 结构简单, 代码清晰, 可随意定制出适合自己的样式
 
 ## 使用方法
 1. 将iswitch.css添加到页面
@@ -17,12 +23,6 @@ Turn your default HTML checkbox inputs into iOS 7 style switches by only one CSS
     
     ![iSwitch preview status](http://ufologist.github.io/iswitch/images/iswitch-preview-status.png "iSwitch preview status")
 
-## 优势
-1. 纯CSS3实现, 无任何依赖, 易于使用
-2. 事件和状态兼容原有的checkbox
-3. 非常小巧 2.52 kB → 1.61 kB → 662 B (gzip)
-4. 结构简单, 代码清晰, 可随意定制出适合自己的样式
-
 ## 支持的浏览器
 PC端(通过[Browserling](https://browserling.com)测试)
 * Chrome 12+
@@ -31,8 +31,9 @@ PC端(通过[Browserling](https://browserling.com)测试)
 
 移动端(通过[BrowserStack](http://www.browserstack.com/screenshots/b81dd1a9ed15689ba9dfb8174eaac189938b4977)测试)
 * iOS 6(iPhone 4S/5/5S/6)
+* Android 4+
 
-真机
+真机测试通过
 * PC Chrome 12.0.742.112
 * iOS 7.0.6(iPhone 5)
 * Android 4.4.2(华为荣耀6 H60-L02)
