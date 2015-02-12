@@ -18,6 +18,10 @@
     ],
     "license": "MIT",
     "homepage": "http://ufologist.github.io/iswitch",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/ufologist/iswitch.git"
+    },
     "ignore": [
         "build",
         "components",

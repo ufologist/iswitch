@@ -67,7 +67,6 @@
     </style>
 </head>
 <body class="body-iswitch">
-    <!-- demo实例转移到gh-pages去, 做一个demo用N多个iswitch组合成字母: iOS 7 -->
     <div class="container">
         <h1 class="header">iSwitch <small>A pretty pure CSS3 iOS 7 style checkbox</small><small>v1.0.0 2015-02-05</small></h1>
         <p class="desc">iSwitch helps you turn your default HTML checkbox inputs into iOS 7 style switches by only one CSS class.</p>
@@ -90,6 +89,7 @@
         <a href="https://github.com/ufologist/iswitch">&hearts;iSwitch</a>
     </div>
     <script>
+        // 测试获取iswitch的选中状态
         [].slice.apply(document.querySelectorAll('.iswitch')).forEach(function(el) {
             el.parentNode.querySelector('.iswitch-status').innerText = el.checked;
             el.onchange = function() {
