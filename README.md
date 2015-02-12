@@ -23,6 +23,12 @@ Turn your default HTML checkbox inputs into iOS 7 style switches by only one CSS
     
     ![iSwitch preview status](http://ufologist.github.io/iswitch/images/iswitch-preview-status.png "iSwitch preview status")
 
+## 安装
+Bower
+```shell
+$ bower install iswitch
+```
+
 ## 支持的浏览器
 PC端(通过[Browserling](https://browserling.com)测试)
 * Chrome 12+
