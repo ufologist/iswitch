@@ -2,21 +2,100 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://rawgit.com/ufologist/iswitch/master/iswitch.css">
+    <title>iSwitch示例</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://rawgit.com/ufologist/iswitch/master/dist/iswitch.min.css">
     <style>
-    body {
-        background-color: rgb(70,68,68);
+    /* 以下样式仅用于示例页面, 与集成iswitch无关 */
+    .body-iswitch {
+        background-color: #eee;
+    }
+    .body-iswitch label,
+    .body-iswitch span {
+        vertical-align: middle;
+    }
+    .container {
+        width: 60%;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 1px 2px 3px #CCC;
+    }
+    .header {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+        margin-top: 0;
+        box-shadow: 0 1px 0 #fff;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2.5em;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    }
+    .header small {
+        display: block;
+        margin-bottom: 5px;
+        color: #bbb;
+        font-size: 0.3em;
+        text-shadow: none;
+    }
+    .desc {
+        font-weight: bold;
+    }
+    .list-iswitch-example {
+        list-style: none;
+        padding-left: 0;
+    }
+    .list-iswitch-example li {
+        margin-bottom: 10px;
+    }
+    .footer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: 20px;
+        text-align: right;
+        background-color: #ddd;
+    }
+    .footer a {
+        text-decoration: none;
     }
     </style>
 </head>
-<body>
-    <div>
-        <!-- TODO: 测试下其他浏览器平台是否兼容, 补充下兼容的CSS样式? -->
-        <!-- demo实例转移到gh-pages去, 做一个demo用N多个iswitch组合成字母: iOS 7 -->
-        <input type="checkbox" name="switch" class="iswitch" checked>
-        <input type="checkbox" name="switch" class="iswitch">
-        <input type="checkbox" name="switch" class="iswitch" checked disabled>
-        <input type="checkbox" name="switch" class="iswitch" disabled>
+<body class="body-iswitch">
+    <div class="container">
+        <h1 class="header">iSwitch <small>A pretty pure CSS3 iOS 7 style checkbox</small><small>v1.0.0 2015-02-05</small></h1>
+        <p class="desc">iSwitch helps you turn your default HTML checkbox inputs into iOS 7 style switches by only one CSS class.</p>
+        <ul class="list-iswitch-example">
+            <li>
+                <label for="iswitchDefault">默认状态的iSwitch</label> <input id="iswitchDefault" type="checkbox" name="iswitch" class="iswitch"> <span>选中状态: </span><span class="iswitch-status"></span>
+            </li>
+            <li>
+                <label for="iswitchChecked">选中状态的iSwitch</label> <input id="iswitchChecked" type="checkbox" name="iswitch" class="iswitch" checked> <span>选中状态: </span><span class="iswitch-status"></span>
+            </li>
+            <li>
+                <label for="iswitchDisabled">禁用默认状态的iSwitch</label> <input id="iswitchDisabled" type="checkbox" name="iswitch" class="iswitch" disabled> <span>选中状态: </span><span class="iswitch-status"></span>
+            </li>
+            <li>
+                <label for="iswitchCheckedDisabled">禁用选中状态的iSwitch</label> <input id="iswitchCheckedDisabled" type="checkbox" name="iswitch" class="iswitch" checked disabled> <span>选中状态: </span><span class="iswitch-status"></span>
+            </li>
+        </ul>
     </div>
+    <div class="footer">
+        <a href="https://github.com/ufologist/iswitch">&hearts;iSwitch</a>
+    </div>
+    <script>
+        // 测试获取iswitch的选中状态
+        [].slice.apply(document.querySelectorAll('.iswitch')).forEach(function(el) {
+            el.parentNode.querySelector('.iswitch-status').innerText = el.checked;
+            el.onchange = function() {
+                this.parentNode.querySelector('.iswitch-status').innerText = this.checked;
+            };
+        });
+    </script>
 </body>
 </html>

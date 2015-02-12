@@ -585,7 +585,6 @@ code {
   font-family: "Lucida Sans", Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
   font-size: 13px;
   color: #efefef;
-  text-shadow: 0px 1px 0px #000;
   margin: 0 4px;
   padding: 2px 6px;
   background: #333;
@@ -689,9 +688,8 @@ header p {
 #banner {
   z-index: 100;
   left: 0;
-  right: 50%;
+  right: 0;
   height: 50px;
-  margin-right: -382px;
   position: fixed;
   top: 115px;
   background: #ffcc00;
@@ -757,8 +755,9 @@ header p {
   background-color: #FFE788;
 }
 #banner .downloads {
-  float: right;
-  margin: 0 45px 0 0;
+  position: fixed;
+  right: 50%;
+  margin-right: -279px;
 }
 #banner .downloads span {
   float: left;
@@ -785,9 +784,10 @@ header p {
   position: absolute;
   height: 36px;
   width: 36px;
-  right: 7px;
+  right: 50%;
   top: 7px;
   display: block;
+  margin-right: -325px;
   background: url(../images/octocat-logo.png);
 }
 
@@ -858,6 +858,17 @@ footer {
   bottom: 20px;
   text-align: right;
   line-height: 16px;
+}
+
+.list-iswitch-example {
+    padding: 6px 10px;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    background: #F8F8F8;
+    list-style: none;
+}
+.list-iswitch-example li {
+    margin-bottom: 10px;
 }
 
 @media print, screen and (max-width: 1060px) {

@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>iSwitch by ufologist</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/github.css">
+    <link rel="stylesheet" href="https://rawgit.com/ufologist/iswitch/master/dist/iswitch.min.css">
+    <script src="http://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="javascripts/main.js"></script>
+    <script src="javascripts/rainbow-custom.min.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -18,12 +20,11 @@
 
       <header>
         <h1>iSwitch</h1>
-        <p>iOS 7 style switches for your checkboxes</p>
+        <p>A pretty pure CSS3 iOS 7 style checkbox</p>
       </header>
 
       <div id="banner">
         <span id="logo"></span>
-
         <a href="https://github.com/ufologist/iswitch" class="button fork"><strong>View On GitHub</strong></a>
         <div class="downloads">
           <span>Downloads:</span>
@@ -40,18 +41,90 @@
       </nav>
       <section>
         <h1>
-<a id="iswitch" class="anchor" href="#iswitch" aria-hidden="true"><span class="octicon octicon-link"></span></a>iswitch</h1>
-
-<p>iOS 7 style switches for your checkboxes</p>
-
-<p>纯CSS实现的效果, 参考 <a href="https://github.com/abpetkov/switchery">https://github.com/abpetkov/switchery</a> 来完善文档</p>
-
-<p>优势
-1. 纯CSS, 无任何依赖, 随意集成到项目中使用
-2. 非常小巧(仅2kb - 未压缩)
-3. 结构简单, 易于使用
-4. 代码清晰, 可随意定制出适合自己的样式</p>
+          <a id="iswitch" class="anchor" href="#iswitch" aria-hidden="true">
+            <span class="octicon octicon-link"></span>
+          </a>
+          iSwitch
+        </h1>
+        <p>iSwitch helps you turn your default HTML checkbox inputs into iOS 7 style switches by only one CSS class.</p>
+        <h2>v1.0.0 2015-02-05</h2>
+        <h2>优势</h2>
+        <ul>
+          <li>纯CSS3实现, 无任何依赖, 易于使用</li>
+          <li>事件和状态兼容原有的checkbox</li>
+          <li>非常小巧 2.52 kB → 1.61 kB → 662 B (gzip)</li>
+          <li>结构简单, 代码清晰, 可随意定制出适合自己的样式</li>
+        </ul>
+        <h2>使用方法</h2>
+        <ol>
+          <li>
+            将<a href="https://github.com/ufologist/iswitch/raw/master/dist/iswitch.min.css">iswitch.css</a>添加到页面
+            <pre><code data-language="html">&lt;link rel="stylesheet" href="dist/iswitch.min.css"&gt;</code></pre>
+          </li>
+          <li>
+            给input checkbox添加<code data-language="html">iswitch</code>的class
+            <pre><code data-language="html">&lt;input type="checkbox" class="iswitch"&gt;</code></pre>
+          </li>
+          <li>
+            刷新页面, 闪亮登场
+            <ul class="list-iswitch-example">
+                <li>
+                    <label for="iswitchDefault">默认状态的iSwitch</label> <input id="iswitchDefault" type="checkbox" name="iswitch" class="iswitch"> <span>选中状态: </span><span class="iswitch-status"></span>
+                </li>
+                <li>
+                    <label for="iswitchChecked">选中状态的iSwitch</label> <input id="iswitchChecked" type="checkbox" name="iswitch" class="iswitch" checked> <span>选中状态: </span><span class="iswitch-status"></span>
+                </li>
+                <li>
+                    <label for="iswitchDisabled">禁用默认状态的iSwitch</label> <input id="iswitchDisabled" type="checkbox" name="iswitch" class="iswitch" disabled> <span>选中状态: </span><span class="iswitch-status"></span>
+                </li>
+                <li>
+                    <label for="iswitchCheckedDisabled">禁用选中状态的iSwitch</label> <input id="iswitchCheckedDisabled" type="checkbox" name="iswitch" class="iswitch" checked disabled> <span>选中状态: </span><span class="iswitch-status"></span>
+                </li>
+            </ul>
+            <script>
+            // 测试获取iswitch的选中状态
+            [].slice.apply(document.querySelectorAll('.iswitch')).forEach(function(el) {
+                el.parentNode.querySelector('.iswitch-status').innerText = el.checked;
+                el.onchange = function() {
+                    this.parentNode.querySelector('.iswitch-status').innerText = this.checked;
+                };
+            });
+            </script>
+          </li>
+        </ol>
+        <h2>支持的浏览器</h2>
+        <ul>
+          <li>
+            PC端(通过<a href="https://browserling.com/">Browserling</a>测试)
+            <ul>
+              <li>Chrome 12+</li>
+              <li>Safari 5.0.5+</li>
+              <li>Opera 15+</li>
+            </ul>
+          </li>
+          <li>
+            移动端(通过<a href="http://www.browserstack.com/screenshots/b81dd1a9ed15689ba9dfb8174eaac189938b4977">BrowserStack</a>测试)
+            <ul>
+              <li>iOS 6(iPhone 4S/5/5S/6)</li>
+              <li>Android 4+</li>
+            </ul>
+          </li>
+        </ul>
+        <h2>参考</h2>
+        <ul>
+          <li><a href="https://mobile.cmbchina.com/MobileHtml/Login/LoginA.aspx">招商银行 手机银行网页版</a></li>
+          <li><a href="http://abpetkov.github.io/switchery/">Switchery</a></li>
+        </ul>
+        <h2>Examples</h2>
+        <ul>
+          <li><a href="example.html">Example</a></li>
+        </ul>
+        <h2>License</h2>
+        <p>The MIT License (MIT)</p>
+        <p>Copyright (c) 2015 Sun</p>
       </section>
+
+
       <footer>
         <p>Project maintained by <a href="https://github.com/ufologist">ufologist</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
